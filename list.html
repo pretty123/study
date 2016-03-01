@@ -1,0 +1,124 @@
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>直播-列表</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<style type="text/css">
+			body,p,div,ul,li{margin:0;padding:0;}	
+			ul,li{list-style:none;}		
+			.head{width:100%;height:102px;background-color:#102141;background-image:url("images/dingbu.jpg");}
+			/*清除浮动代码*/ 
+			.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0;} 
+			.clearfloat{zoom:1}
+			.logo{float:left;height:100px;line-height:100px;}
+			.logo img{margin-left:10px;width:160px;vertical-align:middle;}
+			.head-user{float:right;text-align:right;height:100px;line-height:100px;color:#32fbef;font-size:20px;}
+			.head-user img{margin-right:10px;border:1px solid #32fbef;border-radius:50%;width:43px;height:43px;vertical-align:middle;margin-left:3px;}
+			.info{width:100%;height:80px;line-height:80px;border-bottom:1px solid #252e43;background-color:#08132b;font-size:20px;}
+			.info1{float:left;color:#fff;margin-left:10px;;}
+			.info2{float:right;color:#fff;margin-right:10px;}
+			.info1-span{display:inline-block;margin-left:5px;margin-top:20px;width:87px;text-align:center;height:40px;line-height:40px;border:2px solid #2bdbd2;border-radius:6px;color:#2bdbd2;}
+			.info2 img{vertical-align:middle;}
+			.introduce{width:100%;background-color:#08132b;padding-bottom:15px;}
+			.introduce-1{color:#2bdbd2;margin-left:10px;font-size:20px;margin-bottom:15px;}
+			.introduce-2{color:#fff;margin-left:10px;font-size:20px;line-height:27px;overflow:hidden;}
+			.introduce-2-h{height:78px;}
+			.introduce-3{text-align:center;margin-top:15px;margin-bottom:15px;}
+			.introduce-4{width:100%;text-align:center;}
+			.introduce-4 img{width:95%;}
+			.live-1{width:100%;height:80px;line-height:80px;background-color:#102141;}
+			.live-1-1{float:left;color:#cbcbcb;font-size:26px;margin-left:10px;}
+			.live-1-2{float:right;color:#cbcbcb;margin-right:10px;font-size:20px;}
+			.live-1-21{color:#32fbef;}
+			.live-1-22{color:#32fbef;font-size:26px;}
+			.live-2{width:100%;background-color:#08132b;padding-top:20px;padding-bottom:10px;}
+			.live-21{width:100%;text-align:center;margin-bottom:20px;}
+			.live-21 img{width:90%;}
+			.live-22{float:right;color:#cbcbcb;font-size:24px;height:35px;}
+			.zan{float:left;background-image:url("images/zan1.png");text-indent:45px;background-repeat:no-repeat;width:100px;height:35px;line-height:35px;color:#32fbef;}
+			.ping{float:left;background-image:url("images/pinglun1.png");text-indent:45px;background-repeat:no-repeat;width:100px;height:35px;line-height:35px;color:#cbcbcb;}
+			.pinglun-list{background-color:#08132b;padding-bottom:10px;}
+			.pinglun-list1{border-top:1px solid #cbcbcb;width:95%;margin:0 auto;}
+			.pinglun-list-11,.pinglun-list-12{float:left;margin-top:15px;margin-bottom:15px;}
+			.pinglun-list-13{float:right;margin-top:15px;margin-bottom:15px;color:#cbcbcb;font-size:20px;}		
+			.pinglun-list-12-1{color:#32fbef;font-size:26px;}	
+			.pinglun-list-12-2{width:120px;color:#cbcbcb;font-size:18px;}
+			.pinglun-list-12{margin-left:15px;}
+			.pinglun-list-11 img{border:2px solid #2bdbd2;width:60px;height:60px;border-radius:50%;}
+			.pinglun{width:170px;height:50px;line-height:50px;border:1px solid #f99d30;text-align:center;color:#f99d30;border-radius:6px;margin:25px auto;}
+			</style>	
+			<script charset="utf-8" src="js/jquery-2.2.1.min.js"></script> 
+			<script charset="utf-8" src="js/jquery.mobile.custom.min.js	"></script> 					
+	</head>
+	<body>
+		<div class="head clearfloat">
+		  <div class="logo"><img src="images/logo.png"></div>
+		  <div class="head-user">Yumi<img src="images/renshu.png"></div>
+		</div>
+		<div class="info clearfloat">
+		  <div class="info1">LIVE<span class="info1-span">直播中</span></div>
+		  <div class="info2"><img src="images/renshu.png">&nbsp;1024人</div>
+		</div>
+		<div class="introduce">		  
+		  <div class="introduce-2">&nbsp;</div>
+		  <div class="introduce-1">直播简介</div>
+		  <div class="introduce-2 introduce-2-h">目前，网络媒体自身还没准确抽象概括出网络直播的界定，为方便起见，不妨参照传播学及电视现场直播的概念给网络直播下个简单的定义：在现场随着事件的发生、发展进程同</div>
+		  <div class="introduce-3"><img src="images/xiala.png"></div>
+		  <div class="introduce-4"><img src="images/AD.jpg"></div>
+		</div>
+		<div class="live-1 clearfloat">
+		  <div class="live-1-1">直播标题文字</div>
+		  <div class="live-1-2">2015.03.15|<span class="live-1-21">19:</span><span class="live-1-22">30</span></div>
+		</div>
+		<div class="live-2 clearfloat">
+		  <div class="live-21"><img src="images/live.png"></div>
+		  <div class="introduce-2 introduce-2-h">新浪赛事直播中心为广大球迷24小时提供全面及时的赛事直播,包括NBA直播,足球直播,英超直播,欧冠直播,NBA视频直播,火箭NBA直播,湖人NBA直播,等体育赛事直播......</div>
+		  <div class="introduce-3"><img src="images/xiala.png"></div>
+		  <div class="live-22">		    
+		     <div class="zan">18</div>
+		     <div class="ping">55</div>		     
+		  </div>
+		</div>
+		<div class="pinglun-list">	
+		  <div class="pinglun-list1 clearfloat">
+		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
+		    <div class="pinglun-list-12">
+		      <p class="pinglun-list-12-1">Yumi</p>		      
+		      <p class="pinglun-list-12-2">我来晚了，现在直播多久了啊？</p>
+		    </div>
+		    <div class="pinglun-list-13">2016-03-31</div>
+		  </div>
+		   <div class="pinglun-list1 clearfloat">
+		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
+		    <div class="pinglun-list-12">
+		      <p class="pinglun-list-12-1">Yumi</p>		      
+		      <p class="pinglun-list-12-2">我来晚了，现在直播多久了啊？</p>
+		    </div>
+		    <div class="pinglun-list-13">2016-03-31</div>
+		  </div>
+		   <div class="pinglun-list1 clearfloat">
+		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
+		    <div class="pinglun-list-12">
+		      <p class="pinglun-list-12-1">Yumi</p>		      
+		      <p class="pinglun-list-12-2">我来晚了，现在直播多久了啊？</p>
+		    </div>
+		    <div class="pinglun-list-13">2016-03-31</div>
+		  </div>
+		   <div class="pinglun-list1 clearfloat">
+		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
+		    <div class="pinglun-list-12">
+		      <p class="pinglun-list-12-1">Yumi</p>		      
+		      <p class="pinglun-list-12-2">我来晚了，现在直播多久了啊？</p>
+		    </div>
+		    <div class="pinglun-list-13">2016-03-31</div>
+		  </div>
+		  <div class="pinglun">更多评论</div>
+		</div>
+	</body>
+</html>
+<script>
+$(".introduce-3").on("tap",function(){	
+	$(this).prev().removeClass("introduce-2-h");
+});
+
+</script>
