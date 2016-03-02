@@ -1,22 +1,40 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-<meta charset="utf8">
-    <title>Excolo Slider - yet another jQuery slider/caroussel plugin</title>
- <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>直播-列表</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <link href="css/reset.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-
     <noscript>
-        <link rel="stylesheet" href="/css/mobile.min.css" />
+    <link rel="stylesheet" href="/css/mobile.min.css" />
     </noscript>
-
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/jquery.excoloSlider.js"></script>
-    <link href="css/jquery.excoloSlider.css" rel="stylesheet" />
-    
-    
- <script charset="utf-8" src="js/jquery.mobile.custom.min.js	"></script>
+    <link href="css/jquery.excoloSlider.css" rel="stylesheet" />  
+    <style type="text/css">
+			body,p,div,ul,li{margin:0;padding:0;}	
+			ul,li{list-style:none;}				
+			/*清除浮动代码*/ 
+			.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0;} 
+			.clearfloat{zoom:1}
+			.introduce{width:100%;background-color:#08132b;}
+			.slide img{width:100%;}
+			.slider-num{position:absolute;bottom:0;right:0;}				
+			.slider{padding:0;}
+			.grid_12{margin:0;}
+			ul.es-pager{display:block;position:absolute;bottom:0;}
+			ul.es-pager li{border: 2px solid #fff;}
+			ul.es-pager li:hover, ul.es-pager li.act {background-color: #fff;}
+			.index-list{width:100%;background-color:#08132b;}
+			.index-list1{margin-bottom:15px;width:50%;float:left;text-align:center;position:relative;}
+			.index-list1 img{width:95%;}
+			.index-list1-txt{width:95%;left:2.5%;background-color:rgba(0,0,0,0.5);position:absolute;bottom:3px;height:27px;line-height:27px;color:#fff;}
+			.index-list1-txt-left{float:left;text-indent:10px;}
+			.index-list1-txt-right{float:right;margin-right:10px;}
+			.index-list1-txt-right img{width:18px;height:18px;}
+			</style>	 
+    <script charset="utf-8" src="js/jquery.mobile.custom.min.js	"></script> 
     <script>
         // Settings for Adaptive.js
         var ADAPT_CONFIG = {
@@ -28,148 +46,70 @@
                 '980px            = 960.min.css'
             ]
         };
-
     </script>
-    <script src="js/adapt.min.js"></script>
-    <script type="text/javascript">
-        SyntaxHighlighter.config.tagName = "code";
-    </script>
-
-
+    <script src="js/adapt.min.js"></script>   
     <script>
         $(function () {
-            $("#sliderA").excoloSlider();
-            $("#sliderB").excoloSlider();
+            $("#sliderA").excoloSlider();           
         });
     </script>
 </head>
-<body>
-    <header>
-		<div class="container_12">
-			<div class="grid_2 suffix_10"><a href="http://excolo.github.io/Excolo-Slider/" title="Click here to go to the GitHub page for this plugin"><img alt="Slider logo" src="images/logo.png" /></a></div>
-		</div>
-	</header>
-
-	<div class="h20"></div>
-	
-	<div class="container_12">
-		<div class="grid_8">
-		
-			<div id="sliderA" class="slider">
-			    <img src="images/image2.jpg" />
-				<img src="images/image3.jpg" />
-				
-				
-			</div>
-			
-			<div class="h10"></div>
-			
-		</div>
-
-		<div class="grid_4">
-			<h2>Default Slider</h2>
-			<p>This slider is setup with default settings.</p>
-			
-			<ul>
-				<li>Auto Play is on</li>
-				<li>Auto Size is on</li>
-				<li>Repeat is on</li>
-				<li>Prev/next navigation buttons are on</li>
-				<li>Prev/next navigation autohide is on</li>
-				<li>Pagination is on</li>
-				<li>Touch navigation is on</li>
-				<li>Mouse navigation is on</li>
-				<li>Pause on hover is on</li>
-				<li>CSS3 transitions is on</li>
-				<li>Delay is 0ms</li>
-				<li>Slide interval is 3000ms (3s)</li>
-			</ul>
-            
-		    <div class="h10"></div>
-
-			<h3>Setup:</h3>
-            <code class="brush: js; toolbar: false;">
-                $(function () {
-                    $("#sliderA").excoloSlider();
-                });
-            </code>
-
-		</div>
-		
-		<div class="h20"></div>
-
-	</div>
-
-	<div class="h20"></div>
-	
-    
-	<div class="container_12">
-		<div class="grid_8">
-		
-			<div id="sliderB" class="slider">
-				<div style="background-color: #ff7500"><h2>First slide</h2></div>
-				<div style="background-color: #b6ff00"><h2>Second slide</h2></div>
-				
-				
-			</div>
-			
-			<div class="h10"></div>
-			
-		</div>
-
-		<div class="grid_4">
-			<h2>Default Slider with div slides</h2>
-			<p>This slider is setup with default settings, but using DIV elements for slides instead of IMG elements.</p>
-			
-			<ul>
-				<li>Auto Play is on</li>
-				<li>Auto Size is on</li>
-				<li>Repeat is on</li>
-				<li>Prev/next navigation buttons are on</li>
-				<li>Prev/next navigation autohide is on</li>
-				<li>Touch navigation is on</li>
-				<li>Mouse navigation is on</li>
-				<li>Pause on hover is on</li>
-				<li>CSS3 transitions is on</li>
-				<li>Delay is 0ms</li>
-				<li>Slide interval is 3000ms (3s)</li>
-			</ul>
-            
-		    <div class="h10"></div>
-
-			<h3>Setup:</h3>
-            <code class="brush: js; toolbar: false;">
-                $(function () {
-                    $("#sliderB").excoloSlider();
-                });
-            </code>
-
-		</div>
-		
-		<div class="h20"></div>
-
-	</div>
-
-	<div class="h20"></div>
-
-	<div class="container_12">
+<body>  
+	<div class="introduce">		  
+	 <div class="container_12">
 		<div class="grid_12">
-			<hr />
-			<p>The beautiful photos used in these examples were used with permission from the photographer <a href="http://fursik.deviantart.com/" target='_blank' title="Link to the photographer of the photos used in examples">Piotr Furs</a>.<br />
-			These photos, and more, are available at his <a href="http://fursik.deviantart.com/" target='_blank' title="Link to the photographer of the photos used in examples">deviantArt profile, Fursik</a>.</p>
-			
+		   <div id="sliderA" class="slider">	
+		       <div style="background-size:cover;background-image: url(images/image2.jpg)"></div>
+			   <div style="background-size:cover;background-image: url(images/image3.jpg)"></div>	
+			</div>					
+			<div class="h10"></div>			
 		</div>
-		
-		<div class="h20"></div>
-
 	</div>
-
-    <script type="text/javascript">
-        SyntaxHighlighter.autoloader(
-          'js jscript javascript  http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js'
-        );
-        SyntaxHighlighter.all();
-    </script>
-
+	</div>
+    <div class="index-list clearfloat">
+      <div class="index-list1">
+        <img src="images/image2.jpg">
+        <div class="index-list1-txt">
+          <div class="index-list1-txt-left">直播间名称</div>
+          <div class="index-list1-txt-right"><img src="images/renshu.png">&nbsp;1024人</div>
+        </div>
+      </div>
+       <div class="index-list1">
+        <img src="images/image2.jpg">
+        <div class="index-list1-txt">
+          <div class="index-list1-txt-left">直播间名称</div>
+          <div class="index-list1-txt-right"><img src="images/renshu.png">&nbsp;1024人</div>
+        </div>
+      </div>
+       <div class="index-list1">
+        <img src="images/image2.jpg">
+        <div class="index-list1-txt">
+          <div class="index-list1-txt-left">直播间名称</div>
+          <div class="index-list1-txt-right"><img src="images/renshu.png">&nbsp;1024人</div>
+        </div>
+      </div>
+       <div class="index-list1">
+        <img src="images/image2.jpg">
+        <div class="index-list1-txt">
+          <div class="index-list1-txt-left">直播间名称</div>
+          <div class="index-list1-txt-right"><img src="images/renshu.png">&nbsp;1024人</div>
+        </div>
+      </div>
+       <div class="index-list1">
+        <img src="images/image2.jpg">
+        <div class="index-list1-txt">
+          <div class="index-list1-txt-left">直播间名称</div>
+          <div class="index-list1-txt-right"><img src="images/renshu.png">&nbsp;1024人</div>
+        </div>
+      </div>
+       <div class="index-list1">
+        <img src="images/image2.jpg">
+        <div class="index-list1-txt">
+          <div class="index-list1-txt-left">直播间名称</div>
+          <div class="index-list1-txt-right"><img src="images/renshu.png">&nbsp;1024人</div>
+        </div>
+      </div>
+    </div>
 </body>
 </html>
+
