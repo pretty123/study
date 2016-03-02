@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>直播-列表</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">  
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />  
+    <style type="text/css">
+			body,p,div,ul,li{margin:0;padding:0;}
+			div{margin:-1px;}	
+			ul,li{list-style:none;}		
+			.head{width:100%;height:102px;background-color:#102141;background-image:url("images/dingbu.jpg");}
+			/*清除浮动代码*/ 
+			.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0;} 
+			.clearfloat{zoom:1}
+			.logo{float:left;height:100px;line-height:100px;}
+			.logo img{margin-left:10px;width:160px;vertical-align:middle;}
+			.head-user{float:right;text-align:right;height:100px;line-height:100px;color:#32fbef;font-size:20px;}
+			.head-user img{margin-right:10px;border:1px solid #32fbef;border-radius:50%;width:43px;height:43px;vertical-align:middle;margin-left:3px;}
+			.info{width:100%;height:80px;line-height:80px;border-bottom:1px solid #252e43;background-color:#08132b;font-size:20px;}
+			.info1{width:50%;;float:left;color:#fff;text-indent:15px;}
+			.info2{width:50%;text-align:right;float:left;color:#fff;}
+			.info1-span{display:inline-block;margin-left:5px;margin-top:20px;width:87px;text-align:center;height:40px;line-height:40px;border:2px solid #2bdbd2;border-radius:6px;color:#2bdbd2;}
+			.info2 img{vertical-align:middle;}			
+			.h5-mp4{width:100%;text-align:center;background-color:#000000;height:479px;}	
+			.wei{width:100%;height:100%;line-height:479px;}
+			.wei img{vertical-align:middle;}
+			.panel{width:100%;height:88px;background-color:#102141;color:#fff;}	
+			.panel-a{cursor:pointer;float:left;color:#23a7a7;font-size:26px;height:100%;line-height:88px;font-weight:700;width:33.33%;text-align:center;}	
+			.kong{height:1px;background-color:#102141;width:100%;}	
+			.panel .active{color:#32fbef;border-bottom:3px solid #32fbef;}
+			.pinglun-list{background-color:#08132b;height:515px;overflow:hidden;width:100%;display:block;}
+			.pinglun-list1{border-top:1px solid #cbcbcb;width:95%;margin:0 auto;}
+			.pinglun-list1:first-child{border-top:none}
+			.pinglun-list-11,.pinglun-list-12{float:left;margin-top:15px;margin-bottom:15px;}
+			.pinglun-list-13{float:right;margin-top:15px;margin-bottom:15px;color:#cbcbcb;font-size:20px;}		
+			.pinglun-list-12-1{color:#32fbef;font-size:26px;}	
+			.pinglun-list-12-2{width:120px;color:#cbcbcb;font-size:18px;}
+			.pinglun-list-12{margin-left:15px;}
+			.pinglun-list-11 img{border:2px solid #2bdbd2;width:60px;height:60px;border-radius:50%;}	
+			.transform-ping{text-align:center;;position:fixed;bottom:0px;height:52px;line-height:52px;width:100%;background-color:rgba(32,34,47,0.5);color:#54555e;}	
+			.transform-ping img{width:30px;height:30px;vertical-align:middle;}	
+			.transform-ping input{text-indent:20px;width:270px;color:#fff;height:34px;border:1px solid #54555e;border-radius:3px;background-color:#20222f;margin:0 15px; }
+.introduce{width:100%;background-color:#08132b;padding-bottom:15px;display:none;}
+			.hr-border{border:1px solid #54555e;margin-left:10px;margin-right:10px;}
+			.introduce-1{color:#2bdbd2;margin-left:10px;font-size:20px;margin-bottom:15px;}
+			.introduce-2{color:#fff;margin-left:10px;font-size:20px;line-height:27px;overflow:hidden;}
+			.introduce-2-h{height:78px;}
+			.introduce-3{text-align:center;margin-top:15px;margin-bottom:15px;}
+			.introduce-4{width:100%;text-align:center;}
+			.introduce-4 img{width:95%;}
+			.slide img{width:100%;}
+			.slider-num{position:absolute;bottom:0;right:0;}	
+			.h5-mp4{text-align:center;}	
+            .thankyou{width:100%;background-color:#08132b;padding-bottom:15px;margin:-1px;display:none;}
+			.dashang{width:170px;height:34px;line-height:34px;border:1px solid #f99d30;text-align:center;color:#f99d30;border-radius:6px;margin:5px auto;cursor:pointer;}
+			.thankyou-1{width:100%;height:45px;line-height:45px;text-indent:10px;font-size:20px;color:#fff;}
+			.thankyou-1 span{display:inline-block;width:28px;}
+			.dasahgn-img{width:28px;}
+			.border-img{width:32px;height:32px;vertical-align:middle;border:1px solid #32fbef;border-radius:50%;margin:0 15px;}
+			.dashang-redbag{display:none;width:300px;height:230px;background-color:rgb(236,236,236);position:fixed;bottom:150px;border-radius:5px;}
+			.dashang-1{position:relative;width:100%;text-align:center;height:45px;line-height:45px;color:rgb(154,154,154);font-size:22px;}			
+			.dashang-1-img{position:absolute;right:10px;top:10px;width:13px;height:13px;}
+			.dashang-2{color:#000;font-size:27px;text-align:center;margin:15px 0;}
+			.dashang-3 span{display:inline-block;text-indent:10px;width:165px;height:35px;line-height:35px;margin-left:70px;margin-right:5px;border:2px solid rgb(202,202,202);border-radius:5px;}
+			.dashang-3 input{width:60px;margin-left:60px;border:none;background-color:rgb(236,236,236)}
+			.dashang-4{cursor:pointer;font-size:18px;text-align:center;width:121px;height:36px;line-height:36px;color:#fff;border-radius:5px;background-color:rgb(249,157,48);margin:20px auto;}
+</style>	
+    <noscript>
+    <link rel="stylesheet" href="/css/mobile.min.css" />
+    </noscript>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.excoloSlider.js"></script>
+    <link href="css/jquery.excoloSlider.css" rel="stylesheet" />   
+    <script charset="utf-8" src="js/jquery.mobile.custom.min.js	"></script> 
+    <script>
+        // Settings for Adaptive.js
+        var ADAPT_CONFIG = {
+            path: 'css/',
+            dynamic: true,
+            range: [
+                '0px    to 760px  = mobile.min.css',
+                '760px  to 980px  = 720.min.css',
+                '980px            = 960.min.css'
+            ]
+        };
+    </script>
+    <script src="js/adapt.min.js"></script>   
+    <script>
+        $(function () {
+            $("#sliderA").excoloSlider();           
+        });
+    </script>
+</head>
+<body>
+    <div class="head clearfloat">
+		  <div class="logo"><img src="images/logo.png"></div>
+		  <div class="head-user">Yumi<img src="images/renshu.png"></div>
+		</div>
+	 <div class="h5-mp4">
+	        <div class="wei">
+	          <img src="images/wei.png">
+	        </div>	        
+		    <!--<video width="320" height="240" controls>
+			   <source src="images/movie.mp4" type="video/mp4">	  
+			</video> -->
+	 </div>
+	<div class="info clearfloat">
+	  <div class="info1">LIVE<span class="info1-span">直播中</span></div>
+	  <div class="info2"><img src="images/renshu.png">&nbsp;1024人&nbsp;</div>
+	</div>	
+	<div class="panel clearfloat">	 
+	  <div class="panel-a panel-a1 active">评论</div>
+	  <div class="panel-a panel-a2">简介</div>
+	  <div class="panel-a panel-a3">打赏</div> 
+	</div>
+    <div class="pinglun-list">	
+		  <div class="pinglun-list1 clearfloat">
+		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
+		    <div class="pinglun-list-12">
+		      <p class="pinglun-list-12-1">Yumi</p>		      
+		      <p class="pinglun-list-12-2">1.我来晚了，现在直播多久了啊？</p>
+		    </div>
+		    <div class="pinglun-list-13">2016-03-31</div>
+		  </div>
+		   <div class="pinglun-list1 clearfloat">
+		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
+		    <div class="pinglun-list-12">
+		      <p class="pinglun-list-12-1">Yumi</p>		      
+		      <p class="pinglun-list-12-2">2.我来晚了，现在直播多久了啊？</p>
+		    </div>
+		    <div class="pinglun-list-13">2016-03-31</div>
+		  </div>
+		   <div class="pinglun-list1 clearfloat">
+		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
+		    <div class="pinglun-list-12">
+		      <p class="pinglun-list-12-1">Yumi</p>		      
+		      <p class="pinglun-list-12-2">3.我来晚了，现在直播多久了啊？</p>
+		    </div>
+		    <div class="pinglun-list-13">2016-03-31</div>
+		  </div>
+		   <div class="pinglun-list1 clearfloat">
+		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
+		    <div class="pinglun-list-12">
+		      <p class="pinglun-list-12-1">Yumi</p>		      
+		      <p class="pinglun-list-12-2">4.我来晚了，现在直播多久了啊？</p>
+		    </div>
+		    <div class="pinglun-list-13">2016-03-31</div>
+		  </div>	  
+		  <div class="transform-ping">
+		    评论<input type="text"><img src="images/fasong.png">
+		  </div>
+		</div>
+        <div class="introduce">		  
+		  <div class="introduce-1">&nbsp;</div>
+		  <div class="introduce-1">直播简介</div><hr class="hr-border"/>
+		  <div class="introduce-2 introduce-2-h">目前，网络媒体自身还没准确抽象概括出网络直播的界定，为方便起见，不妨参照传播学及电视现场直播的概念给网络直播下个简单的定义：在现场随着事件的发生、发展进程同</div>
+		  <div class="introduce-3"><img src="images/xiala.png"></div><hr class="hr-border"/>
+		   <div class="container_12">
+		<div class="grid_12">
+		   <div id="sliderA" class="slider">	
+		       <div style="background-size:cover;background-image: url(images/image2.jpg)"><h2 class="es-caption">First slide<span style='float:right'>1/2</span></h2></div>
+			   <div style="background-size:cover;background-image: url(images/image3.jpg)"><h2 class="es-caption">Second slide<span style='float:right'>2/2</span></h2></div>	
+			</div>					
+			<div class="h10"></div>			
+		</div>			
+		</div>
+		</div>		
+		<div class="thankyou">	
+		   <div class="introduce-1">&nbsp;</div>	  
+		   <div class="introduce-1">贡献排行</div><hr class="hr-border"/>
+		   <div class="thankyou-1">
+		     <span><img src="images/no1.png" class="dasahgn-img"></span><img src="images/renshu.png" class="border-img">Yumi
+		   </div>
+		   <div class="thankyou-1">
+		     <span><img src="images/no2.png" class="dasahgn-img"></span><img src="images/renshu.png" class="border-img">Yumi
+		   </div>
+		   <div class="thankyou-1">
+		     <span><img src="images/no3.png" class="dasahgn-img"></span><img src="images/renshu.png" class="border-img">Yumi
+		   </div>
+		   <div class="thankyou-1">
+		     <span></span><img src="images/renshu.png" class="border-img">Yumi
+		   </div>
+		    <div class="transform-ping">
+		      <div class="dashang">我来打赏</div>
+		  </div>
+		</div>
+		<div class="dashang-redbag">
+		  <div class="dashang-1">打赏红包<img src="images/close.png" class="dashang-1-img"></div>
+		  <div class="dashang-2">￥123.05</div>
+		  <div class="dashang-3"><span>金额<input type="text" placeholder="输入金额"></span>元</div>
+		  <div class="dashang-4">我来打赏!</div>
+		</div>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+	$(".dashang-redbag").css("left",($(document).width()-300)/2);   	   	
+});
+$(".dashang-1-img").on("tap",function(){
+	$(".dashang-redbag").css("display","none");
+});
+$(".introduce-3").on("tap",function(){	
+	$(this).prev().removeClass("introduce-2-h");
+	$(this).css("display","none");
+});
+$(".dashang").on("tap",function(){
+	$(".dashang-redbag").css("display","block");
+});
+$(".panel-a1").on("tap",function(){
+	$(".panel-a").each(function(){
+		$(this).removeClass("active");
+	});
+	$(this).addClass("active");
+	$(".pinglun-list").css("display","block");
+	$(".introduce").css("display","none");
+	$(".thankyou").css("display","none");	
+});
+$(".panel-a2").on("tap",function(){
+	$(".panel-a").each(function(){
+		$(this).removeClass("active");
+	});
+	$(this).addClass("active");	
+	$(".pinglun-list").css("display","none");
+	$(".introduce").css("display","block");
+	$(".thankyou").css("display","none");	
+});
+$(".panel-a3").on("tap",function(){
+	$(".panel-a").each(function(){
+		$(this).removeClass("active");
+	});
+	$(this).addClass("active");
+	$(".pinglun-list").css("display","none");
+	$(".introduce").css("display","none");
+	$(".thankyou").css("display","block");	
+});
+</script>
+
