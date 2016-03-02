@@ -1,9 +1,12 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf8">
-		<title>直播-列表</title>
-		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-		<style type="text/css">
+<head>
+    <title>直播-列表</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style type="text/css">
 			body,p,div,ul,li{margin:0;padding:0;}	
 			ul,li{list-style:none;}		
 			.head{width:100%;height:102px;background-color:#102141;background-image:url("images/dingbu.jpg");}
@@ -37,7 +40,7 @@
 			.live-22{float:right;color:#cbcbcb;font-size:24px;height:35px;}
 			.zan{float:left;background-image:url("images/zan1.png");text-indent:45px;background-repeat:no-repeat;width:100px;height:35px;line-height:35px;color:#32fbef;}
 			.ping{float:left;background-image:url("images/pinglun1.png");text-indent:45px;background-repeat:no-repeat;width:100px;height:35px;line-height:35px;color:#cbcbcb;}
-			.pinglun-list{background-color:#08132b;padding-bottom:10px;}
+			.pinglun-list{background-color:#08132b;height:515px;overflow:hidden;}
 			.pinglun-list1{border-top:1px solid #cbcbcb;width:95%;margin:0 auto;}
 			.pinglun-list-11,.pinglun-list-12{float:left;margin-top:15px;margin-bottom:15px;}
 			.pinglun-list-13{float:right;margin-top:15px;margin-bottom:15px;color:#cbcbcb;font-size:20px;}		
@@ -45,13 +48,42 @@
 			.pinglun-list-12-2{width:120px;color:#cbcbcb;font-size:18px;}
 			.pinglun-list-12{margin-left:15px;}
 			.pinglun-list-11 img{border:2px solid #2bdbd2;width:60px;height:60px;border-radius:50%;}
-			.pinglun{width:170px;height:50px;line-height:50px;border:1px solid #f99d30;text-align:center;color:#f99d30;border-radius:6px;margin:25px auto;}
+			.pinglun{width:170px;height:50px;line-height:50px;border:1px solid #f99d30;text-align:center;color:#f99d30;border-radius:6px;margin:0 auto;cursor:pointer;}
+			.slide img{width:100%;}
+			.slider-num{position:absolute;bottom:0;right:0;}	
+			.h5-mp4{text-align:center;}		
+			.more-bottom{background-color:#08132b;padding-top:20px;height:100px;}
 			</style>	
-			<script charset="utf-8" src="js/jquery-2.2.1.min.js"></script> 
-			<script charset="utf-8" src="js/jquery.mobile.custom.min.js	"></script> 					
-	</head>
-	<body>
-		<div class="head clearfloat">
+			
+		
+    <noscript>
+    <link rel="stylesheet" href="/css/mobile.min.css" />
+    </noscript>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.excoloSlider.js"></script>
+    <link href="css/jquery.excoloSlider.css" rel="stylesheet" />   
+    <script charset="utf-8" src="js/jquery.mobile.custom.min.js	"></script> 
+    <script>
+        // Settings for Adaptive.js
+        var ADAPT_CONFIG = {
+            path: 'css/',
+            dynamic: true,
+            range: [
+                '0px    to 760px  = mobile.min.css',
+                '760px  to 980px  = 720.min.css',
+                '980px            = 960.min.css'
+            ]
+        };
+    </script>
+    <script src="js/adapt.min.js"></script>   
+    <script>
+        $(function () {
+            $("#sliderA").excoloSlider();           
+        });
+    </script>
+</head>
+<body>
+    <div class="head clearfloat">
 		  <div class="logo"><img src="images/logo.png"></div>
 		  <div class="head-user">Yumi<img src="images/renshu.png"></div>
 		</div>
@@ -60,18 +92,37 @@
 		  <div class="info2"><img src="images/renshu.png">&nbsp;1024人</div>
 		</div>
 		<div class="introduce">		  
-		  <div class="introduce-2">&nbsp;</div>
+		  <div class="introduce-1">&nbsp;</div>
 		  <div class="introduce-1">直播简介</div>
 		  <div class="introduce-2 introduce-2-h">目前，网络媒体自身还没准确抽象概括出网络直播的界定，为方便起见，不妨参照传播学及电视现场直播的概念给网络直播下个简单的定义：在现场随着事件的发生、发展进程同</div>
 		  <div class="introduce-3"><img src="images/xiala.png"></div>
-		  <div class="introduce-4"><img src="images/AD.jpg"></div>
+		   <div class="container_12">
+		<div class="grid_12">
+		   <div id="sliderA" class="slider">	
+		       <div style="background-size:cover;background-image: url(images/image2.jpg)"><h2 class="es-caption">First slide<span style='float:right'>1/2</span></h2></div>
+			   <div style="background-size:cover;background-image: url(images/image3.jpg)"><h2 class="es-caption">Second slide<span style='float:right'>2/2</span></h2></div>	
+			</div>					
+			<div class="h10"></div>			
 		</div>
-		<div class="live-1 clearfloat">
+			
+	</div>
+	</div>
+    <div class="live-1 clearfloat">
 		  <div class="live-1-1">直播标题文字</div>
 		  <div class="live-1-2">2015.03.15|<span class="live-1-21">19:</span><span class="live-1-22">30</span></div>
 		</div>
 		<div class="live-2 clearfloat">
 		  <div class="live-21"><img src="images/live.png"></div>
+		  <div class="h5-mp4">
+		    <video width="320" height="240" controls>
+			  <!-- <source src="images/movie.mp4" type="video/mp4">	 -->  
+			</video>
+		  </div>
+		  <div class="h5-mp4">
+		  <audio controls>			  
+			  <source src="images/horse.mp3" type="audio/mpeg">			
+		  </audio>
+		  </div>
 		  <div class="introduce-2 introduce-2-h">新浪赛事直播中心为广大球迷24小时提供全面及时的赛事直播,包括NBA直播,足球直播,英超直播,欧冠直播,NBA视频直播,火箭NBA直播,湖人NBA直播,等体育赛事直播......</div>
 		  <div class="introduce-3"><img src="images/xiala.png"></div>
 		  <div class="live-22">		    
@@ -84,7 +135,7 @@
 		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
 		    <div class="pinglun-list-12">
 		      <p class="pinglun-list-12-1">Yumi</p>		      
-		      <p class="pinglun-list-12-2">我来晚了，现在直播多久了啊？</p>
+		      <p class="pinglun-list-12-2">1.我来晚了，现在直播多久了啊？</p>
 		    </div>
 		    <div class="pinglun-list-13">2016-03-31</div>
 		  </div>
@@ -92,7 +143,7 @@
 		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
 		    <div class="pinglun-list-12">
 		      <p class="pinglun-list-12-1">Yumi</p>		      
-		      <p class="pinglun-list-12-2">我来晚了，现在直播多久了啊？</p>
+		      <p class="pinglun-list-12-2">2.我来晚了，现在直播多久了啊？</p>
 		    </div>
 		    <div class="pinglun-list-13">2016-03-31</div>
 		  </div>
@@ -100,7 +151,7 @@
 		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
 		    <div class="pinglun-list-12">
 		      <p class="pinglun-list-12-1">Yumi</p>		      
-		      <p class="pinglun-list-12-2">我来晚了，现在直播多久了啊？</p>
+		      <p class="pinglun-list-12-2">3.我来晚了，现在直播多久了啊？</p>
 		    </div>
 		    <div class="pinglun-list-13">2016-03-31</div>
 		  </div>
@@ -108,17 +159,52 @@
 		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
 		    <div class="pinglun-list-12">
 		      <p class="pinglun-list-12-1">Yumi</p>		      
-		      <p class="pinglun-list-12-2">我来晚了，现在直播多久了啊？</p>
+		      <p class="pinglun-list-12-2">4.我来晚了，现在直播多久了啊？</p>
 		    </div>
 		    <div class="pinglun-list-13">2016-03-31</div>
 		  </div>
-		  <div class="pinglun">更多评论</div>
+		   <div class="pinglun-list1 clearfloat">
+		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
+		    <div class="pinglun-list-12">
+		      <p class="pinglun-list-12-1">Yumi</p>		      
+		      <p class="pinglun-list-12-2">5.我来晚了，现在直播多久了啊？</p>
+		    </div>
+		    <div class="pinglun-list-13">2016-03-31</div>
+		  </div>
+		  <div class="pinglun-list1 clearfloat">
+		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
+		    <div class="pinglun-list-12">
+		      <p class="pinglun-list-12-1">Yumi</p>		      
+		      <p class="pinglun-list-12-2">5.我来晚了，现在直播多久了啊？</p>
+		    </div>
+		    <div class="pinglun-list-13">2016-03-31</div>
+		  </div>
+		  <div class="pinglun-list1 clearfloat">
+		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
+		    <div class="pinglun-list-12">
+		      <p class="pinglun-list-12-1">Yumi</p>		      
+		      <p class="pinglun-list-12-2">6.我来晚了，现在直播多久了啊？</p>
+		    </div>
+		    <div class="pinglun-list-13">2016-03-31</div>
+		  </div>
+		  <div class="pinglun-list1 clearfloat">
+		    <div class="pinglun-list-11"><img src="images/renshu.png"></div>
+		    <div class="pinglun-list-12">
+		      <p class="pinglun-list-12-1">Yumi</p>		      
+		      <p class="pinglun-list-12-2">7.我来晚了，现在直播多久了啊？</p>
+		    </div>
+		    <div class="pinglun-list-13">2016-03-31</div>
+		  </div>
 		</div>
-	</body>
+		<div class="more-bottom"><div class="pinglun">更多评论</div></div>
+</body>
 </html>
 <script>
 $(".introduce-3").on("tap",function(){	
 	$(this).prev().removeClass("introduce-2-h");
+	$(this).css("display","none");
 });
-
+$(".pinglun").on("tap",function(){
+	
+});
 </script>
